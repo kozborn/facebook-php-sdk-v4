@@ -11,7 +11,8 @@ Platform from your PHP app.
 Usage
 -----
 
-This version of the Facebook SDK for PHP requires PHP 5.4 or greater.
+"This version of the Facebook SDK for PHP requires PHP 5.4 or greater."
+This fork of facebook SDK work with PHP 5.3.
 
 Minimal example:
 
