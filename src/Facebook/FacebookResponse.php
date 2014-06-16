@@ -134,7 +134,7 @@ class FacebookResponse
    * @return mixed
    */
   public function getGraphObject($type = 'Facebook\GraphObject') {
-    $graphObject = new GraphObject($this->responseData)ł
+    $graphObject = new GraphObject($this->responseData);
     return $graphObject->cast($type);
   }
 

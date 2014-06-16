@@ -104,7 +104,8 @@ class GraphObject
       if (is_scalar($value)) {
         return $value;
       } else {
-        return (new GraphObject($value))->cast($type);
+        $graphObject = new GraphObject($value);
+        return $graphObject->cast($type);
       }
     } else {
       return null;
