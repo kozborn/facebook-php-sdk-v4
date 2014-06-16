@@ -138,12 +138,13 @@ class FacebookRedirectLoginHelper
           FacebookSession::_getTargetAppSecret($this->appSecret),
         'code' => $this->getCode()
       );
-      $response = (new FacebookRequest(
+      $fbRequest = new FacebookRequest(
         FacebookSession::newAppSession($this->appId, $this->appSecret),
         'GET',
         '/oauth/access_token',
         $params
-      ))->execute()->getResponse();
+      );
+      $response = $fbRequest->execute()->getResponse();
       if (isset($response['access_token'])) {
         return new FacebookSession($response['access_token']);
       }
